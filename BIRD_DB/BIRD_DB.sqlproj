@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>BIRD_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f59000ee-051f-43e1-b485-b4c0698db4e7}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>AnaCreditDB</RootNamespace>
+    <AssemblyName>AnaCreditDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="INPUT" />
+    <Folder Include="INPUT\Tables" />
+    <Folder Include="E_INPUT" />
+    <Folder Include="E_INPUT\Tables" />
+    <Folder Include="ANCRDT" />
+    <Folder Include="ANCRDT\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="INPUT\INPUT.sql" />
+    <Build Include="E_INPUT\Tables\CNTRPRTS_E.sql" />
+    <Build Include="E_INPUT\Tables\CNTRY_E.sql" />
+    <Build Include="E_INPUT\Tables\CRDT_FCLTS_E.sql" />
+    <Build Include="E_INPUT\Tables\CRDT_FCLTS_INSTRMNTS_E.sql" />
+    <Build Include="E_INPUT\Tables\INSTRMNTS_PRTCTNS_E.sql" />
+    <Build Include="E_INPUT\Tables\JNT_CNTRPRTS_E.sql" />
+    <Build Include="E_INPUT\Tables\LN_E.sql" />
+    <Build Include="E_INPUT\Tables\OWND_SCRTY_E.sql" />
+    <Build Include="E_INPUT\Tables\PRTCTN_RCVD_E.sql" />
+    <Build Include="E_INPUT\Tables\PSTV_CRRNT_ACCNT_E.sql" />
+    <Build Include="E_INPUT\Tables\RGSTRY_TBL_SCRTS_E.sql" />
+    <Build Include="E_INPUT\Tables\RL_ESTT_CLM_E.sql" />
+    <Build Include="E_INPUT\Tables\RL_ESTT_PRTCTN_CLM_E.sql" />
+    <Build Include="E_INPUT\Tables\RL_ESTT_PRTCTN_E.sql" />
+    <Build Include="E_INPUT\Tables\SCRTSTNS_OTHR_CRDT_TRNSFRS_E.sql" />
+    <Build Include="E_INPUT\Tables\TRNSCTNS_CNTRPRTS_E.sql" />
+    <Build Include="INPUT\Tables\TRNSFRBL_DPSTS.sql" />
+    <Build Include="INPUT\Tables\CMPSTN_LGL_ENTTY.sql" />
+    <Build Include="INPUT\Tables\CNTRPRTS.sql" />
+    <Build Include="INPUT\Tables\CNTRPRTS_CDS.sql" />
+    <Build Include="INPUT\Tables\CNTRPRTS_PD.sql" />
+    <Build Include="INPUT\Tables\CNTRY.sql" />
+    <Build Include="INPUT\Tables\CRDT_CRD_DBT_CNVNNC_CRDT.sql" />
+    <Build Include="INPUT\Tables\CRDT_CRD_DBT_EXTNDD_CRDT.sql" />
+    <Build Include="INPUT\Tables\CRDT_FCLTS.sql" />
+    <Build Include="INPUT\Tables\CRDT_FCLTS_INSTRMNTS.sql" />
+    <Build Include="INPUT\Tables\ENTRPRS_SZ_PRVS_PRD.sql" />
+    <Build Include="INPUT\Tables\EXTRNL_CRDT_ASSSSMNT.sql" />
+    <Build Include="INPUT\Tables\FCTRNG.sql" />
+    <Build Include="INPUT\Tables\FNNCL_LSS.sql" />
+    <Build Include="INPUT\Tables\GRP.sql" />
+    <Build Include="INPUT\Tables\GRP_CNTRPRTY_RLTNSHP.sql" />
+    <Build Include="INPUT\Tables\GRP_DT.sql" />
+    <Build Include="INPUT\Tables\INDRCT_FCTRNG.sql" />
+    <Build Include="INPUT\Tables\INSTRMNTS_PRTCTNS.sql" />
+    <Build Include="INPUT\Tables\JNT_CNTRPRTS.sql" />
+    <Build Include="INPUT\Tables\LNKD_ENTRPRSS.sql" />
+    <Build Include="INPUT\Tables\OTHR_DPSTS.sql" />
+    <Build Include="INPUT\Tables\OTHR_FNNCL_PRTCTN.sql" />
+    <Build Include="INPUT\Tables\OTHR_LNS.sql" />
+    <Build Include="INPUT\Tables\OTHR_PHYSCL_PRTCTN.sql" />
+    <Build Include="INPUT\Tables\OTHR_TRD_RCVBLS.sql" />
+    <Build Include="INPUT\Tables\OVRDRFTS.sql" />
+    <Build Include="INPUT\Tables\OWND_SCRTY.sql" />
+    <Build Include="INPUT\Tables\PL_ITM.sql" />
+    <Build Include="INPUT\Tables\PRMTR.sql" />
+    <Build Include="INPUT\Tables\PRTNR_ENTRPRSS.sql" />
+    <Build Include="INPUT\Tables\PSTV_CRRNT_ACCNT.sql" />
+    <Build Include="INPUT\Tables\RGSTRY_TBL_SCRTS.sql" />
+    <Build Include="INPUT\Tables\RL_ESTT_CLM.sql" />
+    <Build Include="INPUT\Tables\RL_ESTT_PRTCTN.sql" />
+    <Build Include="INPUT\Tables\RL_ESTT_PRTCTN_CLM.sql" />
+    <Build Include="INPUT\Tables\RVRS_RPRCHS_LNS.sql" />
+    <Build Include="INPUT\Tables\SCRTS_PRTCTN.sql" />
+    <Build Include="INPUT\Tables\SCRTSTNS_OTHR_CRDT_TRNSFRS.sql" />
+    <Build Include="INPUT\Tables\TRNSCTNS_CNTRPRTS.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_ACCNTNG_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_ENTTY.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_ENTTY_DFLT_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_ENTTY_INSTRMNT_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_ENTTY_RSK_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_FNNCL_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_INSTRMNT_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_INSTRMNT_PRTCTN_RCVD_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_JNT_LBLTS_C.sql" />
+    <Build Include="ANCRDT\Tables\ANCRDT_PRTCTN_RCVD_C.sql" />
+    <Build Include="ANCRDT\ANCRDT.sql" />
+    <Build Include="E_INPUT\E_INPUT.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

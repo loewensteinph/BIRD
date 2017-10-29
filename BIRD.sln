@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BIRD_DB", "BIRD_DB\BIRD_DB.sqlproj", "{F59000EE-051F-43E1-B485-B4C0698DB4E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F59000EE-051F-43E1-B485-B4C0698DB4E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59000EE-051F-43E1-B485-B4C0698DB4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59000EE-051F-43E1-B485-B4C0698DB4E7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F59000EE-051F-43E1-B485-B4C0698DB4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59000EE-051F-43E1-B485-B4C0698DB4E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F59000EE-051F-43E1-B485-B4C0698DB4E7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7041D3C-E517-45E4-9F96-DA0929E17B09}
+	EndGlobalSection
+EndGlobal
