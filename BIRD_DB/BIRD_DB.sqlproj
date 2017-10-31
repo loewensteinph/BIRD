@@ -63,6 +63,16 @@
     <Folder Include="E_INPUT\Tables" />
     <Folder Include="ANCRDT" />
     <Folder Include="ANCRDT\Tables" />
+    <Folder Include="DOMAIN" />
+    <Folder Include="DOMAIN\Tables" />
+    <Folder Include="SHS" />
+    <Folder Include="SHS\Tables" />
+    <Folder Include="TRANSFORM" />
+    <Folder Include="TRANSFORM\Views" />
+    <Folder Include="TRANSFORM\Views\LOAN" />
+    <Folder Include="TRANSFORM\Views\PROTECTION" />
+    <Folder Include="TRANSFORM\Views\LOAN\ENRICHED" />
+    <Folder Include="TRANSFORM\Views\PROTECTION\ENRICHED" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="INPUT\INPUT.sql" />
@@ -134,6 +144,113 @@
     <Build Include="ANCRDT\Tables\ANCRDT_PRTCTN_RCVD_C.sql" />
     <Build Include="ANCRDT\ANCRDT.sql" />
     <Build Include="E_INPUT\E_INPUT.sql" />
+    <Build Include="DOMAIN\DOMAIN.sql" />
+    <Build Include="SHS\Tables\SHSG4_ENTITY.sql" />
+    <Build Include="SHS\Tables\SHSG4_GROUP.sql" />
+    <Build Include="SHS\Tables\SHSG4_ISIN.sql" />
+    <Build Include="SHS\Tables\SHSG4_NON_ISIN.sql" />
+    <Build Include="SHS\SHS.sql" />
+    <Build Include="DOMAIN\Tables\ACCNTNG_CLSSFCTN.sql" />
+    <Build Include="DOMAIN\Tables\ACCNTNG_FRMWK.sql" />
+    <Build Include="DOMAIN\Tables\APPRCH_CRDT_QLTY_STTS.sql" />
+    <Build Include="DOMAIN\Tables\APPRCH_JNT_LBLTS.sql" />
+    <Build Include="DOMAIN\Tables\APPRCH_PRDNTL_PRPSS.sql" />
+    <Build Include="DOMAIN\Tables\BLN.sql" />
+    <Build Include="DOMAIN\Tables\CHRCTRSTCS_CRDT_RSK.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_ACC_STANDARD.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_AREA.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_ASSET_SECURITISATION_TYP.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_COLLATERAL_AREA.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_CURRENCY.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_ENTITY_STATUS.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_GROUP_TYPE.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_INSTR_ESA2010.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_ISSUER_AREA.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_ISSUER_ESA_2010.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_ISSUER_RBG.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_NACE.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_PRIMARY_ASSET_CLASS.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_SECTOR.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_SECURITY_STATUS.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_SENIORITY_TYPE.sql" />
+    <Build Include="DOMAIN\Tables\CL_SHS_UNIT.sql" />
+    <Build Include="DOMAIN\Tables\CNSLDTN_SCP.sql" />
+    <Build Include="DOMAIN\Tables\CNTRL_PBLC_BDS.sql" />
+    <Build Include="DOMAIN\Tables\CNTRPRTY_RL.sql" />
+    <Build Include="DOMAIN\Tables\CRDT_QLTY.sql" />
+    <Build Include="DOMAIN\Tables\CRDT_QLTY_STP.sql" />
+    <Build Include="DOMAIN\Tables\CRDT_QLTY_STP_BIRD.sql" />
+    <Build Include="DOMAIN\Tables\CRRNCY.sql" />
+    <Build Include="DOMAIN\Tables\ECAI_ECA.sql" />
+    <Build Include="DOMAIN\Tables\ECNMC_ACTVTY.sql" />
+    <Build Include="DOMAIN\Tables\ENTRPRS_SZ_CHC.sql" />
+    <Build Include="DOMAIN\Tables\ENTTY_RL.sql" />
+    <Build Include="DOMAIN\Tables\EXCPTN_MRG_ACQSTN.sql" />
+    <Build Include="DOMAIN\Tables\EXPSR_CLSS.sql" />
+    <Build Include="DOMAIN\Tables\FDCRY.sql" />
+    <Build Include="DOMAIN\Tables\FRBRNC_STTS.sql" />
+    <Build Include="DOMAIN\Tables\FRM_RFRNC.sql" />
+    <Build Include="DOMAIN\Tables\FRQNCY.sql" />
+    <Build Include="DOMAIN\Tables\GGRPHCL_ARS.sql" />
+    <Build Include="DOMAIN\Tables\GRP_TYP.sql" />
+    <Build Include="DOMAIN\Tables\IMPRMNT_ASSSSMNT_MTHD.sql" />
+    <Build Include="DOMAIN\Tables\INSTRMNT_CB.sql" />
+    <Build Include="DOMAIN\Tables\INSTTTNL_SCTR.sql" />
+    <Build Include="DOMAIN\Tables\INSTTTNL_SCTR_CNTRL.sql" />
+    <Build Include="DOMAIN\Tables\JNT_LBLTY.sql" />
+    <Build Include="DOMAIN\Tables\LGL_PRCDNG_STTS.sql" />
+    <Build Include="DOMAIN\Tables\PRDNTL_PRTFL.sql" />
+    <Build Include="DOMAIN\Tables\PRJCT_FNNC_LN.sql" />
+    <Build Include="DOMAIN\Tables\PRMRY_ASST_CLSSFCTN.sql" />
+    <Build Include="DOMAIN\Tables\PRPS.sql" />
+    <Build Include="DOMAIN\Tables\PRSPCTV.sql" />
+    <Build Include="DOMAIN\Tables\PRTCTN_VLTN_APPRCH.sql" />
+    <Build Include="DOMAIN\Tables\RCGNTN_STTS.sql" />
+    <Build Include="DOMAIN\Tables\RCRSE.sql" />
+    <Build Include="DOMAIN\Tables\RFRNC_RT.sql" />
+    <Build Include="DOMAIN\Tables\RLTNSHP_SCRTSTN_CRDT_TRNSFR.sql" />
+    <Build Include="DOMAIN\Tables\RPYMNT_RGHTS.sql" />
+    <Build Include="DOMAIN\Tables\SBRDNTD_DBT.sql" />
+    <Build Include="DOMAIN\Tables\SBTYP_PRTCTN.sql" />
+    <Build Include="DOMAIN\Tables\SCRTY_GRNT_LVL.sql" />
+    <Build Include="DOMAIN\Tables\SCRTY_LVL.sql" />
+    <Build Include="DOMAIN\Tables\SCRTY_RNK_LVL.sql" />
+    <Build Include="DOMAIN\Tables\SCRTY_STTS.sql" />
+    <Build Include="DOMAIN\Tables\SRC_ENCMBRNC.sql" />
+    <Build Include="DOMAIN\Tables\STTS.sql" />
+    <Build Include="DOMAIN\Tables\SZ.sql" />
+    <Build Include="DOMAIN\Tables\TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT.sql" />
+    <Build Include="DOMAIN\Tables\TYP_AMRTSTN.sql" />
+    <Build Include="DOMAIN\Tables\TYP_ASST_SCRTSTN.sql" />
+    <Build Include="DOMAIN\Tables\TYP_CMPNNT.sql" />
+    <Build Include="DOMAIN\Tables\TYP_ENTRPRS.sql" />
+    <Build Include="DOMAIN\Tables\TYP_FCLTY.sql" />
+    <Build Include="DOMAIN\Tables\TYP_INSTRMNT.sql" />
+    <Build Include="DOMAIN\Tables\TYP_INTRST_RT.sql" />
+    <Build Include="DOMAIN\Tables\TYP_PRDTL_CNSLDTN.sql" />
+    <Build Include="DOMAIN\Tables\TYP_PRTCTN.sql" />
+    <Build Include="DOMAIN\Tables\TYP_PRTCTN_VL.sql" />
+    <Build Include="DOMAIN\Tables\TYP_RSK_TRNSFR.sql" />
+    <Build Include="DOMAIN\Tables\TYP_TRNSCTN.sql" />
+    <Build Include="DOMAIN\Tables\TYP_TRNSFR.sql" />
+    <Build Include="TRANSFORM\TRANSFORM.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\CRDT_CRD_DBT_CNVNNC_CRDT_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\CRDT_CRD_DBT_EXTNDD_CRDT_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\FCTRNG_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\FNNCL_LSS_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\INDRCT_FCTRNG_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\OTHR_DPSTS_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\OTHR_LNS_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\OTHR_TRD_RCVBLS_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\OVRDRFTS_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\RVRS_RPRCHS_LNS_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\TRNSFRBL_DPSTS_E.sql" />
+    <Build Include="TRANSFORM\Views\PROTECTION\PL_ITM_E.sql" />
+    <Build Include="TRANSFORM\Views\PROTECTION\OTHR_PHYSCL_PRTCTN_E.sql" />
+    <Build Include="TRANSFORM\Views\PROTECTION\OTHR_FNNCL_PRTCTN_E.sql" />
+    <Build Include="TRANSFORM\Views\PROTECTION\SCRTS_PRTCTN_E.sql" />
+    <Build Include="TRANSFORM\Views\LOAN\ENRICHED\LN_E.sql" />
+    <Build Include="TRANSFORM\Views\PROTECTION\ENRICHED\PRTCTN_RCVD_E.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
@@ -141,5 +258,11 @@
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
       <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
     </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BIRD_DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

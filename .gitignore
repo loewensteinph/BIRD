@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/BIRD/v15/.suo
+/BIRD_DB/bin/Debug
+/BIRD_DB/obj/Debug
+/BIRD_DB/BIRD_DB.jfm
+/BIRD_DB/BIRD_DB.dbmdl

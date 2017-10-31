@@ -1,0 +1,92 @@
+﻿CREATE VIEW TRANSFORM.INDRCT_FCTRNG_E
+AS
+SELECT IS_CRDT_LN_OTHR_RV_CRDT = 0,
+       DT_END_INTRST_ONLY = CAST(NULL AS DATETIME2),
+       FDCRY = 0,
+       PRJCT_FNNC_LN = 2,
+       PYMNT_FRQNCY = 4,
+       RCRS = 0,
+       RPYMNT_RGHTS = 2,
+       IS_RVLVNG_LN = 0,
+       SBRDNTD_DBT = 2,
+       SYNDCTD_CNTRCT_ID = NULL,
+       TYP_AMRTSTN = 4,
+       TYP_INSTRMNT = 1021,
+       A.INSTRMNT_UNQ_ID,
+       A.ACCMLTD_CHNGS_FV_CR,
+       A.ACCMLTD_IMPRMNT,
+       A.ACCMLTD_WRTFFS,
+       A.ACCRD_INTRST,
+       A.ANNLSD_AGRD_RT,
+       A.APPRCH_CRDT_QLTY_STTS,
+       A.ARRRS,
+       A.CMLTV_RCVRS_SNC_DFLT,
+       A.CMMTMNT_INCPTN,
+       A.CNNCTD_FCTRNG_ID,
+       A.CRDT_QLTY_STTS,
+       A.CRRNCY_DNMNTN,
+       A.CRRYNG_AMNT,
+       A.DT_DFLT_STTS,
+       A.DT_FRBRNC_STTS,
+       A.DT_INCPTN,
+       A.DT_LGL_FNL_MTRTY,
+       A.DT_NXT_INTRST_RT_RST,
+       A.DT_PRFRMNG_STTS,
+       A.DT_PST_D,
+       A.DT_STTLMNT,
+       A.FRBRNC_STTS,
+       A.FV,
+       A.FV_CHNG_CR_BFR_PRCHS,
+       A.FV_CHNG_HDG_ACCNTNG,
+       A.GRSS_CRRYNG_AMNT_E_INTRST,
+       A.IMPRMNT_ASSSSMNT_MTHD,
+       A.IMPRMNT_STTS,
+       A.INSTRMNT_ID,
+       A.INTRST_RT_CP,
+       A.INTRST_RT_FLR,
+       A.INTRST_RT_RST_FRQNCY,
+       A.INTRST_RT_SPRD,
+       A.IS_DBT_FNNCNG,
+       A.OFF_BLNC_SHT_AMNT,
+       A.OTSTNDNG_NMNL_AMNT,
+       A.PRCNTG_TRNSFRRD,
+       A.PRPS,
+       A.PRVSNS_OFF_BLNC_SHT,
+       A.RFRNC_RT,
+       A.RLTNSHP_SCRTSTN_CRDT_TRNSFR,
+       A.SCRTSTN_TRNSFR_ID,
+       A.SRC_ENCMBRNC,
+       A.TYP_INTRST_RT,
+       B.ACCNTNG_CLSSFCTN,
+       B.CNTRCT_ID,
+       B.OBSRVD_AGNT_INTRNL_ID,
+       B.PRDNTL_PRTFL,
+       B.IS_RTL_EXPSR,
+       B.IS_SRVCD_OBSRVD_AGNT	
+FROM INPUT.INDRCT_FCTRNG A
+    INNER JOIN
+    (
+        -- INDRCT_FCTRNG_ADD
+        SELECT A.INSTRMNT_UNQ_ID,
+               B.ACCNTNG_CLSSFCTN,
+               B.CNTRCT_ID,
+               B.OBSRVD_AGNT_INTRNL_ID,
+               B.PRDNTL_PRTFL,
+               B.IS_RTL_EXPSR,
+               B.IS_SRVCD_OBSRVD_AGNT
+        FROM INPUT.INDRCT_FCTRNG A
+            INNER JOIN INPUT.FCTRNG B
+                ON A.CNNCTD_FCTRNG_ID = B.INSTRMNT_UNQ_ID
+    ) B
+        ON A.INSTRMNT_UNQ_ID = B.INSTRMNT_UNQ_ID;
+GO
+
+GO
+EXEC sp_addextendedproperty @name = N'TRANSFORMATION',
+                            @value = N'D_IMPLCT_INDRCT_FCTRNG ',
+                            @level0type = N'SCHEMA',
+                            @level0name = N'TRANSFORM',
+                            @level1type = N'VIEW',
+                            @level1name = N'INDRCT_FCTRNG_E',
+                            @level2type = NULL,
+                            @level2name = NULL;

@@ -875,3 +875,6 @@ EXEC sp_addextendedproperty @name = N'DEFINITION',
                             @level1name = N'INDRCT_FCTRNG',
                             @level2type = N'COLUMN',
                             @level2name = N'TYP_INTRST_RT';
+GO
+
+CREATE INDEX [IX_INDRCT_FCTRNG_CNNCTD_FCTRNG_ID] ON [INPUT].[INDRCT_FCTRNG] ([CNNCTD_FCTRNG_ID])

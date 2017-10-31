@@ -46,6 +46,15 @@ CREATE TABLE [INPUT].[CRDT_CRD_DBT_CNVNNC_CRDT]
     OFF_BLNC_SHT_AMNT FLOAT
 );
 GO
+EXEC sp_addextendedproperty @name = N'BLOCK',
+                            @value = N'Instruments',
+                            @level0type = N'SCHEMA',
+                            @level0name = N'INPUT',
+                            @level1type = N'TABLE',
+                            @level1name = N'CRDT_CRD_DBT_CNVNNC_CRDT',
+                            @level2type = NULL,
+                            @level2name = NULL;
+GO
 EXEC sp_addextendedproperty @name = N'DESCRIPTION',
                             @value = N'Credit card debt: convenience credit',
                             @level0type = N'SCHEMA',

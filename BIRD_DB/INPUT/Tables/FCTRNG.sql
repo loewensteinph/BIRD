@@ -63,6 +63,15 @@ CREATE TABLE [INPUT].[FCTRNG]
     SCRTSTN_TRNSFR_ID NVARCHAR(120)
 );
 GO
+EXEC sp_addextendedproperty @name = N'BLOCK',
+                            @value = N'Instruments',
+                            @level0type = N'SCHEMA',
+                            @level0name = N'INPUT',
+                            @level1type = N'TABLE',
+                            @level1name = N'FCTRNG',
+                            @level2type = NULL,
+                            @level2name = NULL;
+GO
 EXEC sp_addextendedproperty @name = N'DESCRIPTION',
                             @value = N'Factoring',
                             @level0type = N'SCHEMA',
@@ -1179,3 +1188,6 @@ EXEC sp_addextendedproperty @name = N'DEFINITION',
                             @level1name = N'FCTRNG',
                             @level2type = N'COLUMN',
                             @level2name = N'SCRTSTN_TRNSFR_ID';
+GO
+
+CREATE INDEX [IX_FCTRNG_INSTRMNT_UNQ_ID] ON [INPUT].[FCTRNG] (INSTRMNT_UNQ_ID)
