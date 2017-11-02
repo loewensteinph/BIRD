@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BIRD_DB", "BIRD_DB\BIRD_DB.sqlproj", "{F59000EE-051F-43E1-B485-B4C0698DB4E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TOOLS", "TOOLS", "{81BDF6F2-EBEA-4D66-98AC-1C334DFBB79E}"
+	ProjectSection(SolutionItems) = preProject
+		TOOLS\LOAD_DOMAIN_VALUES.ps1 = TOOLS\LOAD_DOMAIN_VALUES.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
