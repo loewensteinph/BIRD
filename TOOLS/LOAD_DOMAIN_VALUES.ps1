@@ -70,8 +70,7 @@ function Out-DataTable
 { 
     [CmdletBinding()] 
     param([Parameter(Position=0, Mandatory=$true, ValueFromPipeline = $true)] [PSObject[]]$InputObject) 
- 
-    Begin 
+     Begin 
     { 
         $dt = new-object Data.datatable   
         $First = $true  
@@ -105,11 +104,9 @@ function Out-DataTable
             $DT.Rows.Add($DR)   
             $First = $false 
         } 
-    }  
-      
+    }      
     End 
     { 
         Write-Output @(,($dt)) 
     } 
- 
-}
+ }
